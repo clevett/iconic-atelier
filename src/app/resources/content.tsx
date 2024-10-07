@@ -83,15 +83,15 @@ const social = [
 ];
 
 const home = {
-  label: "Home",
-  title: `${person.name}'s Portfolio`,
-  description: `Portfolio website showcasing my work as a ${person.role}`,
-  headline: <>Design engineer and builder</>,
+  label: "Contact",
+  title: `Iconic Atelier`,
+  description: `A art studio located in Reykjavik, Iceland.`,
+  address: "Skyggnisbraut 13, Reykjavik 113",
+  headline: <>Iconic Atelier</>,
   subline: (
     <>
-      I'm Selene, a design engineer at <InlineCode>FLY</InlineCode>, where I
-      craft intuitive
-      <br /> user experiences. After hours, I build my own projects.
+      A art studio located in Reykjavik, Iceland. We specialize in paintings,
+      nails, and tattoos.
     </>
   ),
 };
@@ -227,8 +227,8 @@ const about = {
 
 const news = {
   label: "News",
-  title: "Writing about design and tech...",
-  description: `Read what ${person.name} has been up to recently`,
+  title: "Artists at work...",
+  description: `Read what Iconic Atelier has been up to recently`,
   // Create new news posts by adding a new .mdx file to app/news/posts
   // All posts will be listed on the /news route
 };
@@ -259,7 +259,7 @@ const paintings: Gallery = {
   label: "Paintings",
   title: `Paintings by ${loki.name}`,
   description: `A paintings collection by ${loki.name}`,
-  images: getImages("nails", 23),
+  images: getImages("paintings", 23),
 };
 
 const nails: Gallery = {

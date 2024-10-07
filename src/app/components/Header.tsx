@@ -2,19 +2,11 @@
 
 import { usePathname } from "next/navigation";
 
-import { Flex, ToggleButton } from "@/once-ui/components";
+import { Flex, Heading, ToggleButton } from "@/once-ui/components";
 import styles from "@/app/components/Header.module.scss";
 
 import { routes } from "@/app/resources";
-import {
-  person,
-  home,
-  about,
-  news,
-  paintings,
-  tattoos,
-  nails,
-} from "@/app/resources";
+import { person, home, news, paintings, tattoos, nails } from "@/app/resources";
 
 export const Header = () => {
   const pathname = usePathname() ?? "";
@@ -58,7 +50,7 @@ export const Header = () => {
         paddingLeft="12"
         textVariant="body-default-s"
       >
-        Iconic Atelier
+        <Heading variant="display-strong-s">Iconic Atelier</Heading>
       </Flex>
       <Flex
         background="surface"
@@ -70,40 +62,12 @@ export const Header = () => {
         shadow="l"
       >
         <Flex gap="4" textVariant="body-default-s">
-          {routes["/"] && (
-            <ToggleButton
-              prefixIcon="home"
-              href="/"
-              selected={pathname === "/"}
-            >
-              <Flex paddingX="2" hide="s">
-                {home.label}
-              </Flex>
-            </ToggleButton>
-          )}
-          {routes["/about"] && (
-            <ToggleButton
-              prefixIcon="person"
-              href="/about"
-              selected={pathname === "/about"}
-            >
-              <Flex paddingX="2" hide="s">
-                {about.label}
-              </Flex>
-            </ToggleButton>
-          )}
-
-          {routes["/news"] && (
-            <ToggleButton
-              prefixIcon="book"
-              href="/news"
-              selected={pathname.startsWith("/news")}
-            >
-              <Flex paddingX="2" hide="s">
-                {news.label}
-              </Flex>
-            </ToggleButton>
-          )}
+          {routes["/news"] &&
+            getButton({
+              icon: "book",
+              href: "/news",
+              label: news.label,
+            })}
           {routes["/paintings"] &&
             getButton({
               icon: "gallery",
@@ -121,6 +85,12 @@ export const Header = () => {
               icon: "gallery",
               href: "/nails",
               label: nails.label,
+            })}
+          {routes["/"] &&
+            getButton({
+              icon: "person",
+              href: "/",
+              label: home.label,
             })}
         </Flex>
       </Flex>

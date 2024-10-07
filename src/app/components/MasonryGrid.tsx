@@ -21,13 +21,15 @@ export default function MasonryGrid({ images }: { images: Gallery["images"] }) {
     >
       {images.map((image, index) => (
         <SmartImage
+          priority={index === 0}
           alt={image.alt}
           aspectRatio={image.orientation === "horizontal" ? "16 / 9" : "9 / 16"}
           className={styles.gridItem}
+          enlarge={true}
           key={index}
           radius="m"
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           src={image.src}
-          enlarge={true}
         />
       ))}
     </Masonry>
