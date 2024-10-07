@@ -1,0 +1,24 @@
+.masonryGrid {
+  display: flex;
+  margin-left: calc(-1 * var(--static-space-16));
+  width: 100%;
+}
+
+.masonryGridColumn {
+  padding-left: var(--static-space-16);
+  background-clip: padding-box;
+}
+
+.gridItem {
+  margin-bottom: var(--static-space-16);
+  filter: grayscale(1);
+  max-height: 350px;
+
+  transition: ease-in;
+  transition-duration: 0.25s;
+
+  &:hover {
+    filter: grayscale(0);
+    max-height: 530px;
+  }
+}
