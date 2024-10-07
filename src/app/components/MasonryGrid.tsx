@@ -27,6 +27,7 @@ export default function MasonryGrid({ images }: { images: Gallery["images"] }) {
           key={index}
           radius="m"
           src={image.src}
+          enlarge={true}
         />
       ))}
     </Masonry>
