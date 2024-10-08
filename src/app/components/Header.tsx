@@ -76,22 +76,27 @@ export const Header = () => {
             })}
           {routes["/tattoos"] &&
             getButton({
-              icon: "gallery",
+              icon: "needle",
               href: "/tattoos",
               label: tattoos.label,
             })}
           {routes["/nails"] &&
             getButton({
-              icon: "gallery",
+              icon: "paintbrush",
               href: "/nails",
               label: nails.label,
             })}
-          {routes["/"] &&
-            getButton({
-              icon: "person",
-              href: "/",
-              label: home.label,
-            })}
+          {routes["/"] && (
+            <ToggleButton
+              prefixIcon="email"
+              href="/"
+              selected={pathname === "/"}
+            >
+              <Flex paddingX="2" hide="s">
+                {home.label}
+              </Flex>
+            </ToggleButton>
+          )}{" "}
         </Flex>
       </Flex>
       <Flex
