@@ -28,7 +28,7 @@ export function Posts({ range, columns = "1" }: PostsProps) {
     <>
       {displayednewss.length > 0 && (
         <Grid
-          className="auto-rows-max"
+          className={styles.autoFlow}
           columns={`repeat(${columns}, 1fr)`}
           fillWidth
           gap="m"
