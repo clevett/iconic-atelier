@@ -11,9 +11,7 @@ export {
 export {
   person,
   social,
-  newsletter,
   home,
-  about,
   news,
   paintings,
   tattoos,

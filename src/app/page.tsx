@@ -3,6 +3,8 @@ import React from "react";
 import { Heading, Flex, Text, RevealFx } from "@/once-ui/components";
 
 import { baseURL, home, person } from "@/app/resources";
+import { Contact } from "./components";
+import { Socials } from "./components/Socials";
 
 export default function Home() {
   return (
@@ -35,7 +37,7 @@ export default function Home() {
           }),
         }}
       />
-      <Flex fillWidth direction="column" paddingY="l" gap="m">
+      <Flex fillWidth direction="column" paddingY="l" gap="l">
         <Flex direction="column" fillWidth maxWidth="s" gap="m">
           <RevealFx translateY="4">
             <Heading wrap="balance" variant="display-strong-l">
@@ -51,8 +53,6 @@ export default function Home() {
               {home.subline}
             </Text>
           </RevealFx>
-        </Flex>
-        <Flex fillWidth direction="column" gap="m">
           <RevealFx translateY="12" delay={0.4}>
             <Text
               wrap="balance"
@@ -63,13 +63,13 @@ export default function Home() {
             </Text>
           </RevealFx>
         </Flex>
+        <RevealFx translateY="12" delay={0.5}>
+          <Socials />
+        </RevealFx>
+        <RevealFx translateY="12" delay={0.6}>
+          <Contact />
+        </RevealFx>
       </Flex>
-      {/* {routes["/news"] && (
-        <Flex fillWidth paddingX="20">
-          <Posts range={[1, 2]} columns="2" />
-        </Flex>
-      )}
-      {newsletter.display && <Mailchimp />} */}
     </Flex>
   );
 }

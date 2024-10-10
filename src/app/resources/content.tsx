@@ -1,5 +1,3 @@
-import { InlineCode } from "@/once-ui/components";
-
 //TODO: REMOVE THIS
 const person = {
   firstName: "Loki",
@@ -46,29 +44,16 @@ const gabby = {
   languages: [languages.en, languages.pl],
 };
 
-const newsletter = {
-  display: true,
-  title: <>Subscribe to {person.firstName}'s Newsletter</>,
-  description: (
-    <>
-      I occasionally write about design, technology, and share thoughts on the
-      intersection of creativity and engineering.
-    </>
-  ),
-};
-
 const social = [
-  // Links are automatically displayed.
-  // Import new icons in /once-ui/icons.ts
   {
     name: "Facebook",
     icon: "facebook",
-    link: "https://github.com/once-ui-system/nextjs-starter",
+    link: "https://www.facebook.com/iconicatelierr",
   },
   {
     name: "Instagram",
     icon: "instagram",
-    link: "https://www.linkedin.com/company/once-ui/",
+    link: "https://www.instagram.com/iconicatelier_",
   },
 ];
 
@@ -80,8 +65,8 @@ const home = {
   headline: <>Iconic Atelier</>,
   subline: (
     <>
-      A art studio located in Reykjavik, Iceland. We specialize in paintings,
-      nails, and tattoos.
+      Art Gallery located in Skyggnisbraut 13, 113 Reykjavik - In this art space
+      u can buy art, make tattoos/nails and more.
     </>
   ),
 };
@@ -137,4 +122,4 @@ const tattoos: Gallery = {
   images: getImages("tattoos", 139),
 };
 
-export { person, social, newsletter, home, news, paintings, nails, tattoos };
+export { person, social, home, news, paintings, nails, tattoos };

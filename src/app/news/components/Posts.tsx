@@ -28,11 +28,12 @@ export function Posts({ range, columns = "1" }: PostsProps) {
     <>
       {displayednewss.length > 0 && (
         <Grid
+          className="auto-rows-max"
           columns={`repeat(${columns}, 1fr)`}
-          mobileColumns="1col"
           fillWidth
-          marginBottom="40"
           gap="m"
+          marginBottom="40"
+          mobileColumns="1col"
           paddingX="l"
         >
           {displayednewss.map((post) => (
