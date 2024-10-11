@@ -7,6 +7,7 @@ const routes = {
   "/news": true,
   "/tattoos": true,
   "/nails": true,
+  "/contact": true,
 };
 
 // Enable password protection on selected routes

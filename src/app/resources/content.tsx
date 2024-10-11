@@ -1,16 +1,3 @@
-//TODO: REMOVE THIS
-const person = {
-  firstName: "Loki",
-  lastName: "",
-  get name() {
-    return `${this.firstName} ${this.lastName}`;
-  },
-  role: "Artist",
-  avatar: "/images/avatar.jpg",
-  location: "Iceland/Reykjavik", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-  languages: ["English", "Polish"], // optional: Leave the array empty if you don't want to display languages
-};
-
 const location = {
   rvk: "Iceland/Reykjavik",
 };
@@ -49,16 +36,18 @@ const social = [
     name: "Facebook",
     icon: "facebook",
     link: "https://www.facebook.com/iconicatelierr",
+    dm: "https://m.me/iconicatelierr",
   },
   {
     name: "Instagram",
     icon: "instagram",
     link: "https://www.instagram.com/iconicatelier_",
+    dm: "https://instagram.com/m/iconicatelier_",
   },
 ];
 
 const home = {
-  label: "Contact",
+  label: "About",
   title: `Iconic Atelier`,
   description: `An art studio located in Reykjavik, Iceland.`,
   address: "Skyggnisbraut 13, Reykjavik 113",
@@ -103,23 +92,37 @@ const getImages = (folder: string, number: number) => {
 
 const paintings: Gallery = {
   label: "Paintings",
-  title: `Paintings by ${loki.name}`,
+  title: `Paintings by Iconic Atelier`,
   description: `A paintings collection by ${loki.name}`,
   images: getImages("paintings", 23),
 };
 
 const nails: Gallery = {
   label: "Nails",
-  title: "Nails by Gabriela",
+  title: "Nails by Iconic Atelier",
   description: `A nail collection by ${gabby.name}`,
   images: getImages("nails", 25),
 };
 
 const tattoos: Gallery = {
   label: "Tattoos",
-  title: `Tattoos by ${loki.name}`,
+  title: `Tattoos by Iconic Atelier`,
   description: `A tattoos collection by ${loki.name}`,
   images: getImages("tattoos", 139),
 };
 
-export { person, social, home, news, paintings, nails, tattoos };
+const contact = {
+  label: "Contact",
+  title: "Contact Iconic Atelier",
+  description: `Get in touch with Iconic Atelier`,
+  address: "Skyggnisbraut 13, Reykjavik 113",
+  headline: "Contact Us",
+  subline: (
+    <>
+      If you have any questions, please don't hesitate to contact us. We are
+      happy to help you.
+    </>
+  ),
+};
+
+export { social, home, news, paintings, nails, tattoos, contact, location };

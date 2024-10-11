@@ -1,6 +1,6 @@
 import { Flex } from "@/once-ui/components";
-import MasonryGrid from "../components/MasonryGrid";
-import { baseURL, tattoos, person } from "../resources";
+import MasonryGrid from "@/app/components/MasonryGrid";
+import { baseURL, tattoos, home } from "@/app/resources";
 
 export default function Tattoos() {
   return (
@@ -22,10 +22,10 @@ export default function Tattoos() {
             })),
             author: {
               "@type": "Person",
-              name: person.name,
+              name: home.title,
               image: {
                 "@type": "ImageObject",
-                url: `${baseURL}${person.avatar}`,
+                url: `${baseURL}/favicon.ico`,
               },
             },
           }),

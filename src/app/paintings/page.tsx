@@ -1,6 +1,6 @@
 import { Flex } from "@/once-ui/components";
-import MasonryGrid from "../components/MasonryGrid";
-import { baseURL, paintings, person } from "../resources";
+import MasonryGrid from "@/app/components/MasonryGrid";
+import { baseURL, paintings } from "@/app/resources";
 
 export default function Paintings() {
   return (
@@ -20,14 +20,6 @@ export default function Paintings() {
               url: `${baseURL}${image.src}`,
               description: image.alt,
             })),
-            author: {
-              "@type": "Person",
-              name: person.name,
-              image: {
-                "@type": "ImageObject",
-                url: `${baseURL}${person.avatar}`,
-              },
-            },
           }),
         }}
       />

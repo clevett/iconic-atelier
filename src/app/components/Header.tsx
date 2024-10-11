@@ -4,9 +4,15 @@ import { usePathname } from "next/navigation";
 
 import { Flex, Heading, ToggleButton } from "@/once-ui/components";
 import styles from "@/app/components/Header.module.scss";
-
-import { routes } from "@/app/resources";
-import { person, home, news, paintings, tattoos, nails } from "@/app/resources";
+import {
+  location,
+  home,
+  paintings,
+  tattoos,
+  nails,
+  contact,
+  routes,
+} from "@/app/resources";
 
 export const Header = () => {
   const pathname = usePathname() ?? "";
@@ -62,12 +68,23 @@ export const Header = () => {
         shadow="l"
       >
         <Flex gap="4" textVariant="body-default-s">
-          {routes["/news"] &&
+          {routes["/"] && (
+            <ToggleButton
+              prefixIcon="home"
+              href="/"
+              selected={pathname === "/"}
+            >
+              <Flex paddingX="2" hide="s">
+                {home.label}
+              </Flex>
+            </ToggleButton>
+          )}
+          {/* {routes["/news"] &&
             getButton({
               icon: "book",
               href: "/news",
               label: news.label,
-            })}
+            })} */}
           {routes["/paintings"] &&
             getButton({
               icon: "gallery",
@@ -86,17 +103,12 @@ export const Header = () => {
               href: "/nails",
               label: nails.label,
             })}
-          {routes["/"] && (
-            <ToggleButton
-              prefixIcon="email"
-              href="/"
-              selected={pathname === "/"}
-            >
-              <Flex paddingX="2" hide="s">
-                {home.label}
-              </Flex>
-            </ToggleButton>
-          )}{" "}
+          {routes["/contact"] &&
+            getButton({
+              icon: "email",
+              href: "/contact",
+              label: contact.label,
+            })}
         </Flex>
       </Flex>
       <Flex
@@ -107,7 +119,7 @@ export const Header = () => {
         alignItems="center"
         textVariant="body-default-s"
       >
-        {person.location}
+        {location.rvk}
       </Flex>
     </Flex>
   );

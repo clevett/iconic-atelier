@@ -1,9 +1,15 @@
 import React from "react";
 
-import { Heading, Flex, Text, RevealFx } from "@/once-ui/components";
+import {
+  Heading,
+  Flex,
+  Text,
+  RevealFx,
+  IconButton,
+} from "@/once-ui/components";
 
-import { baseURL, home } from "@/app/resources";
-import { Socials } from "@/app/components";
+import { baseURL, contact, home, social } from "@/app/resources";
+import { Contact } from "@/app/components";
 
 export default function Home() {
   return (
@@ -21,9 +27,9 @@ export default function Home() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "WebPage",
-            description: home.description,
-            image: `${baseURL}/og?title=${encodeURIComponent(home.title)}`,
-            name: home.title,
+            description: contact.description,
+            image: `${baseURL}/og?title=${encodeURIComponent(contact.title)}`,
+            name: contact.title,
             url: `https://${baseURL}`,
             publisher: {
               "@type": "Person",
@@ -40,7 +46,7 @@ export default function Home() {
         <Flex direction="column" fillWidth maxWidth="s" gap="m">
           <RevealFx translateY="4">
             <Heading wrap="balance" variant="display-strong-l">
-              {home.headline}
+              {contact.headline}
             </Heading>
           </RevealFx>
           <RevealFx translateY="8" delay={0.2}>
@@ -49,7 +55,7 @@ export default function Home() {
               onBackground="neutral-weak"
               variant="body-default-l"
             >
-              {home.subline}
+              {contact.subline}
             </Text>
           </RevealFx>
           <RevealFx translateY="12" delay={0.4}>
@@ -58,12 +64,29 @@ export default function Home() {
               onBackground="neutral-weak"
               variant="body-default-l"
             >
-              {home.address}
+              {contact.address}
             </Text>
           </RevealFx>
         </Flex>
         <RevealFx translateY="12" delay={0.5}>
-          <Socials />
+          <Flex gap="16">
+            {social.map(
+              (item) =>
+                item.link && (
+                  <IconButton
+                    href={item.dm}
+                    icon={item.icon}
+                    key={item.name}
+                    size="s"
+                    tooltip={item.name}
+                    variant="ghost"
+                  />
+                )
+            )}
+          </Flex>
+        </RevealFx>
+        <RevealFx translateY="12" delay={0.6}>
+          <Contact />
         </RevealFx>
       </Flex>
     </Flex>

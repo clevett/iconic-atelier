@@ -9,13 +9,14 @@ export {
   baseURL,
 } from "@/app/resources/config";
 export {
-  person,
   social,
   home,
   news,
   paintings,
   tattoos,
   nails,
+  contact,
+  location,
 } from "@/app/resources/content";
 
 export type { Gallery } from "@/app/resources/content";
