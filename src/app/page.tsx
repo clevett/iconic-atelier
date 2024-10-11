@@ -51,18 +51,18 @@ export default function Home() {
           </RevealFx>
           <RevealFx translateY="8" delay={0.2}>
             <Text
-              wrap="balance"
               onBackground="neutral-weak"
               variant="body-default-l"
+              wrap="balance"
             >
               {home.subline}
             </Text>
           </RevealFx>
         </Flex>
-        <RevealFx translateY="12" delay={0.5}>
+        <RevealFx translateY="12" delay={0.3}>
           <Socials />
         </RevealFx>
-        <RevealFx translateY="16" delay={0.8}>
+        <RevealFx translateY="16" delay={0.35}>
           <SmartImage
             alt="Iconic Atelier is modern and stylish art studio"
             aspectRatio="16 / 9"

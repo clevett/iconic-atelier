@@ -2,7 +2,7 @@
 
 import { usePathname } from "next/navigation";
 
-import { Flex, Heading, ToggleButton } from "@/once-ui/components";
+import { Flex, Heading, SmartLink, ToggleButton } from "@/once-ui/components";
 import styles from "@/app/components/Header.module.scss";
 import {
   location,
@@ -56,7 +56,7 @@ export const Header = () => {
         paddingLeft="12"
         textVariant="body-default-s"
       >
-        <Heading variant="display-strong-s">Iconic Atelier</Heading>
+        <Heading variant="display-strong-m">Iconic Atelier</Heading>
       </Flex>
       <Flex
         background="surface"
@@ -68,17 +68,19 @@ export const Header = () => {
         shadow="l"
       >
         <Flex gap="4" textVariant="body-default-s">
-          {routes["/"] && (
-            <ToggleButton
-              prefixIcon="home"
-              href="/"
-              selected={pathname === "/"}
-            >
-              <Flex paddingX="2" hide="s">
-                {home.label}
-              </Flex>
-            </ToggleButton>
-          )}
+          <div className={styles.about}>
+            {routes["/"] && (
+              <ToggleButton
+                href="/"
+                prefixIcon="home"
+                selected={pathname === "/"}
+              >
+                <Flex paddingX="2" hide="s">
+                  {home.label}
+                </Flex>
+              </ToggleButton>
+            )}
+          </div>
           {/* {routes["/news"] &&
             getButton({
               icon: "book",
@@ -112,14 +114,16 @@ export const Header = () => {
         </Flex>
       </Flex>
       <Flex
-        hide="s"
-        paddingRight="12"
-        fillWidth
-        justifyContent="flex-end"
         alignItems="center"
+        fillWidth
+        hide="s"
+        justifyContent="flex-end"
+        paddingRight="12"
         textVariant="body-default-s"
       >
-        {location.rvk}
+        <SmartLink href="/" selected={pathname === "/"} className={styles.link}>
+          About
+        </SmartLink>
       </Flex>
     </Flex>
   );

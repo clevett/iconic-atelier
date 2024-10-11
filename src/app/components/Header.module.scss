@@ -1,12 +1,26 @@
 .position {
-    position: sticky;
-    top: 0;
+  position: sticky;
+  top: 0;
 }
 
 @media (--s) {
-    .position {
-        top: auto;
-        position: fixed;
-        bottom: var(--static-space-24);
-    }
+  .position {
+    top: auto;
+    position: fixed;
+    bottom: var(--static-space-24);
+  }
+}
+
+.about {
+  display: none;
+}
+
+@media (--xs) {
+  .about {
+    display: block;
+  }
+}
+
+.link {
+  color: var(--neutral-on-background-strong);
 }
