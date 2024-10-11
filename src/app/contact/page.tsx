@@ -58,7 +58,7 @@ export default function Home() {
               {contact.subline}
             </Text>
           </RevealFx>
-          <RevealFx translateY="12" delay={0.4}>
+          <RevealFx translateY="12" delay={0.3}>
             <Text
               wrap="balance"
               onBackground="neutral-weak"
@@ -68,7 +68,7 @@ export default function Home() {
             </Text>
           </RevealFx>
         </Flex>
-        <RevealFx translateY="12" delay={0.5}>
+        <RevealFx translateY="12" delay={0.35}>
           <Flex gap="16">
             {social.map(
               (item) =>

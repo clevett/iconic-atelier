@@ -75,6 +75,7 @@ export type Gallery = {
     src: string;
     alt: string;
     orientation: "horizontal" | "vertical";
+    id: string;
   }[];
 };
 
@@ -82,9 +83,10 @@ const getImages = (folder: string, number: number) => {
   const images: Gallery["images"] = [];
   for (let i = 1; i <= number; i++) {
     images.push({
-      src: `/images/${folder}/image (${i}).jpg`,
       alt: "image",
+      id: `${folder}-${number}-${i}`,
       orientation: "vertical",
+      src: `/images/${folder}/image (${i}).jpg`,
     });
   }
   return images;
