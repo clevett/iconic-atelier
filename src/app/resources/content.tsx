@@ -16,7 +16,7 @@ const loki = {
   role: "Artist",
   avatar: "/images/avatar.jpg",
   location: location.rvk,
-  languages: [languages.en, languages.pl], // optional: Leave the array empty if you don't want to display languages
+  languages: [languages.en, languages.pl],
 };
 
 const gabby = {

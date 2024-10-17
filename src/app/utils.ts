@@ -2,8 +2,6 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 
-import { baseURL, Gallery } from "@/app/resources";
-
 type Team = {
   name: string;
   role: string;

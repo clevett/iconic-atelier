@@ -1,5 +1,5 @@
 import { Flex } from "@/once-ui/components";
-import MasonryGrid from "@/app/components/MasonryGrid";
+import Images from "@/app/components/Images";
 import { baseURL, paintings } from "@/app/resources";
 import { Metadata } from "next";
 
@@ -50,7 +50,7 @@ export default function Paintings() {
           }),
         }}
       />
-      <MasonryGrid images={paintings.images} />
+      <Images images={paintings.images} />
     </Flex>
   );
 }

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Suspense } from "react";
 
 import {
   Heading,
@@ -64,7 +64,7 @@ export default function Home() {
               name: home.title,
               image: {
                 "@type": "ImageObject",
-                url: `${baseURL}/favicon.ico`,
+                url: `${baseURL}/icon.ico`,
               },
             },
           }),
