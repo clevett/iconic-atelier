@@ -100,6 +100,10 @@ export default function RootLayout({ children }: RootLayoutProps) {
           gradient={effects.gradient}
           dots={effects.dots}
           lines={effects.lines}
+          style={{
+            background:
+              "radial-gradient(100% 100% at 49.99% 0%, var(--static-transparent) 0%, var(--page-background) 100%), radial-gradient(87.4% 84.04% at 6.82% 16.24%, var(--brand-background-medium) 0%, var(--static-transparent) 100%), radial-gradient(217.89% 126.62% at 48.04% 0%, #6a6a6a 0%, var(--static-transparent) 100%)",
+          }}
         />
         <Flex fillWidth minHeight="16"></Flex>
         <Header />
