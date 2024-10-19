@@ -11,7 +11,7 @@ export const Socials = () => {
               href={item.link}
               icon={item.icon}
               key={item.name}
-              size="s"
+              size="l"
               tooltip={item.name}
               variant="ghost"
             />

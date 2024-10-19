@@ -1,3 +1,15 @@
+//Font - Eina 01
+//https://github.com/ionic-team/ionic-legacy-docs/tree/master/content/docs/v3/fonts/eina
+// Uppercase all font
+//Remove white boarder from navigation and bigger, ~30px
+//Add a glow behind the words
+//Remove the navigation icons
+//Add padding to the socials on footer
+//Iconic with red dot
+//Center the logo on about page
+//Add home icon to the phone view
+//https://css-tricks.com/how-to-create-neon-text-with-css/
+
 const location = {
   rvk: "Iceland/Reykjavik",
 };
