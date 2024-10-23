@@ -5,7 +5,6 @@ import { usePathname } from "next/navigation";
 import { Flex, Heading, SmartLink, ToggleButton } from "@/once-ui/components";
 import styles from "@/app/components/Header.module.scss";
 import {
-  location,
   home,
   paintings,
   tattoos,
@@ -26,16 +25,25 @@ export const Header = () => {
     href: string;
     label: string;
   }) => {
+    const selected = href === pathname;
     return (
-      <ToggleButton
-        prefixIcon={icon}
-        href={href}
-        selected={pathname.startsWith(`${href}`)}
-      >
-        <Flex paddingX="2" hide="s">
-          {label}
+      <>
+        <Flex show="s" hide="m">
+          <ToggleButton
+            prefixIcon={icon}
+            href={href}
+            selected={selected}
+            size="l"
+          />
         </Flex>
-      </ToggleButton>
+        <Flex hide="s">
+          <ToggleButton href={href} selected={selected} size="l">
+            <Flex className={styles.label} paddingX="2">
+              {label}
+            </Flex>
+          </ToggleButton>
+        </Flex>
+      </>
     );
   };
 
@@ -56,37 +64,26 @@ export const Header = () => {
         paddingLeft="12"
         textVariant="body-default-s"
       >
-        <Heading variant="display-strong-m">Iconic Atelier</Heading>
+        <SmartLink href="/" selected={pathname === "/"} className={styles.link}>
+          {home.headline}
+        </SmartLink>
       </Flex>
       <Flex
         background="surface"
-        border="neutral-medium"
-        borderStyle="solid-1"
         justifyContent="center"
         padding="4"
         radius="m-4"
         shadow="l"
       >
         <Flex gap="4" textVariant="body-default-s">
-          <div className={styles.about}>
-            {routes["/"] && (
-              <ToggleButton
-                href="/"
-                prefixIcon="home"
-                selected={pathname === "/"}
-              >
-                <Flex paddingX="2" hide="s">
-                  {home.label}
-                </Flex>
-              </ToggleButton>
-            )}
-          </div>
-          {/* {routes["/news"] &&
-            getButton({
-              icon: "book",
-              href: "/news",
-              label: news.label,
-            })} */}
+          <Flex className={styles.about} show="s" hide="m">
+            {routes["/"] &&
+              getButton({
+                icon: "home",
+                href: "/",
+                label: home.label,
+              })}
+          </Flex>
           {routes["/paintings"] &&
             getButton({
               icon: "gallery",

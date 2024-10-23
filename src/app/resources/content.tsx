@@ -1,14 +1,6 @@
 //Font - Eina 01
 //https://github.com/ionic-team/ionic-legacy-docs/tree/master/content/docs/v3/fonts/eina
-// Uppercase all font
-//Remove white boarder from navigation and bigger, ~30px
-//Add a glow behind the words
-//Remove the navigation icons
-//Add padding to the socials on footer
 //Iconic with red dot
-//Center the logo on about page
-//Add home icon to the phone view
-//https://css-tricks.com/how-to-create-neon-text-with-css/
 
 const location = {
   rvk: "Iceland/Reykjavik",
@@ -60,10 +52,14 @@ const social = [
 
 const home = {
   label: "About",
-  title: `Iconic Atelier`,
+  title: `ICONIC Atelier`,
   description: `An art studio located in Reykjavik, Iceland.`,
   address: "Skyggnisbraut 13, Reykjavik 113",
-  headline: <>Iconic Atelier</>,
+  headline: (
+    <span>
+      ICONIC<span style={{ color: "#d20306" }}>.</span> Atelier
+    </span>
+  ),
   subline: (
     <>
       Art Gallery located in Skyggnisbraut 13, 113 Reykjavik - In this art space
@@ -72,13 +68,6 @@ const home = {
   ),
 };
 
-const news = {
-  label: "News",
-  title: "Iconic Atelier",
-  description: `Read what Iconic Atelier has been up to recently`,
-  // Create new news posts by adding a new .mdx file to app/news/posts
-  // All posts will be listed on the /news route
-};
 export type Gallery = {
   label: string;
   title: string;
@@ -139,4 +128,4 @@ const contact = {
   ),
 };
 
-export { social, home, news, paintings, nails, tattoos, contact, location };
+export { social, home, paintings, nails, tattoos, contact, location };

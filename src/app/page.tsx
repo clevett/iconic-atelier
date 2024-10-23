@@ -1,4 +1,4 @@
-import React, { Suspense } from "react";
+import React from "react";
 
 import {
   Heading,
@@ -12,6 +12,8 @@ import { baseURL, home } from "@/app/resources";
 import { Socials } from "@/app/components";
 
 import type { Metadata } from "next";
+
+import styles from "./styles.module.scss";
 
 const { title, description, label } = home;
 const ogImage = `https://${baseURL}/og?title=${encodeURIComponent(title)}`;
@@ -71,11 +73,22 @@ export default function Home() {
         }}
       />
       <Flex fillWidth direction="column" paddingY="l" gap="l">
-        <Flex direction="column" fillWidth maxWidth="s" gap="m">
+        <Flex
+          direction="column"
+          alignItems="center"
+          fillWidth
+          maxWidth="s"
+          gap="m"
+          style={{
+            alignSelf: "center",
+          }}
+        >
           <RevealFx translateY="4">
-            <Heading wrap="balance" variant="display-strong-l">
-              {home.headline}
-            </Heading>
+            <span className={` ${styles.textShadow}`}>
+              <Heading wrap="balance" variant="display-strong-l">
+                {home.headline}
+              </Heading>
+            </span>
           </RevealFx>
           <RevealFx translateY="8" delay={0.15}>
             <Text
@@ -87,17 +100,24 @@ export default function Home() {
             </Text>
           </RevealFx>
         </Flex>
+
         <RevealFx translateY="12" delay={0.2}>
-          <Socials />
+          <Flex show="s">
+            <Socials />
+          </Flex>
         </RevealFx>
-        <RevealFx translateY="16" delay={0.25}>
+
+        <RevealFx translateY="16" delay={0.2}>
           <SmartImage
-            alt="Iconic Atelier is modern and stylish art studio"
+            alt="Iconic Atelier is modern and stylish art / tattoo studio"
             aspectRatio="16 / 9"
             priority={true}
             radius="m"
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             src="/images/paintings/image (21).jpg"
+            style={{
+              boxShadow: "0 0 8px 0 rgba(0, 0, 0, 0.1)",
+            }}
           />
         </RevealFx>
       </Flex>

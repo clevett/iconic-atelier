@@ -10,6 +10,8 @@ import { baseURL, effects, home, style } from "@/app/resources";
 import { Inter } from "next/font/google";
 import { Source_Code_Pro } from "next/font/google";
 
+import localFont from "next/font/local";
+
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -36,6 +38,32 @@ export const metadata: Metadata = {
     },
   },
 };
+const path = "../app/fonts";
+const myFont = { className: "" };
+// const myFont = localFont({
+//   src: [
+//     {
+//       path: path + "/eina-01-regular.woff2",
+//       weight: "400",
+//       style: "normal",
+//     },
+//     {
+//       path: path + "/eina-01-light.woff2",
+//       weight: "400",
+//       style: "light",
+//     },
+//     {
+//       path: path + "/eina-01-bold.woff2",
+//       weight: "700",
+//       style: "bold",
+//     },
+//     {
+//       path: path + "/eina-01-semibold.woff2",
+//       weight: "500",
+//       style: "semi-bold",
+//     },
+//   ],
+// });
 
 const primary = Inter({
   variable: "--font-primary",
@@ -67,6 +95,8 @@ interface RootLayoutProps {
 }
 
 export default function RootLayout({ children }: RootLayoutProps) {
+  console.log(myFont.className);
+
   return (
     <Flex
       as="html"
@@ -85,7 +115,8 @@ export default function RootLayout({ children }: RootLayoutProps) {
         primary.variable,
         secondary ? secondary.variable : "",
         tertiary ? tertiary.variable : "",
-        code.variable
+        code.variable,
+        myFont.className
       )}
     >
       <Flex

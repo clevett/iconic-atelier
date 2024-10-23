@@ -1,0 +1,7 @@
+.textShadow h1 {
+  color: black;
+  text-shadow: 0 0 0.5vh #fff, 0 0 0.5vh #fff, 0 0 0.5vh #fff, 0 0 0.5vh #fff,
+    0 0 1vh #fff;
+  animation: flicker 7s infinite;
+  filter: brightness(1);
+}
