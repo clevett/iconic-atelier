@@ -1,16 +1,9 @@
 import "@/once-ui/styles/index.scss";
 import "@/once-ui/tokens/index.scss";
 
-import classNames from "classnames";
-
 import { Flex, Background } from "@/once-ui/components";
 import { Footer, Header, RouteGuard } from "@/app/components";
 import { baseURL, effects, home, style } from "@/app/resources";
-
-import { Inter } from "next/font/google";
-import { Source_Code_Pro } from "next/font/google";
-
-import localFont from "next/font/local";
 
 import { Metadata } from "next";
 
@@ -39,58 +32,12 @@ export const metadata: Metadata = {
   },
 };
 
-const myFont = localFont({
-  variable: "--font-eina",
-  src: [
-    {
-      path: "eina-03-regular.woff2",
-      weight: "400",
-      style: "normal",
-    },
-    {
-      path: "eina-03-bold.woff2",
-      weight: "700",
-      style: "bold",
-    },
-    {
-      path: "eina-03-semibold.woff2",
-      weight: "500",
-      style: "semi-bold",
-    },
-  ],
-});
-
-const primary = Inter({
-  variable: "--font-primary",
-  subsets: ["latin"],
-  display: "swap",
-});
-
-type FontConfig = {
-  variable: string;
-};
-
-/*
-	Replace with code for secondary and tertiary fonts
-	from https://once-ui.com/customize
-*/
-const secondary: FontConfig | undefined = undefined;
-const tertiary: FontConfig | undefined = undefined;
-/*
- */
-
-const code = Source_Code_Pro({
-  variable: "--font-code",
-  subsets: ["latin"],
-  display: "swap",
-});
-
 interface RootLayoutProps {
   children: React.ReactNode;
 }
 
 export default function RootLayout({ children }: RootLayoutProps) {
-  console.log(myFont.className);
+  // console.log(myFont.className);
 
   return (
     <Flex
@@ -106,13 +53,6 @@ export default function RootLayout({ children }: RootLayoutProps) {
       data-border={style.border}
       data-surface={style.surface}
       data-transition={style.transition}
-      className={classNames(
-        primary.variable,
-        secondary ? secondary.variable : "",
-        tertiary ? tertiary.variable : "",
-        code.variable,
-        myFont.className
-      )}
     >
       <Flex
         style={{ minHeight: "100vh" }}
