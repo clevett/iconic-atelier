@@ -67,25 +67,31 @@ const home = {
   ),
 };
 
+export type Image = {
+  src: string;
+  alt: string;
+  orientation: "horizontal" | "vertical";
+  id: string;
+};
+
 export type Gallery = {
   label: string;
   title: string;
   description: string;
-  images: {
-    src: string;
-    alt: string;
-    orientation: "horizontal" | "vertical";
-    id: string;
-  }[];
+  images: Image[];
 };
 
-const getImages = (folder: string, number: number) => {
+const getImages = (
+  folder: string,
+  number: number,
+  orientation: "vertical" | "horizontal" = "vertical"
+) => {
   const images: Gallery["images"] = [];
   for (let i = 1; i <= number; i++) {
     images.push({
       alt: "image",
       id: `${folder}-${number}-${i}`,
-      orientation: "vertical",
+      orientation,
       src: `/images/${folder}/image (${i}).jpg`,
     });
   }
@@ -96,7 +102,7 @@ const paintings: Gallery = {
   label: "Paintings",
   title: `Paintings by Iconic Atelier`,
   description: `A paintings collection by ${loki.name}`,
-  images: getImages("paintings", 23),
+  images: getImages("paintings", 5, "horizontal"),
 };
 
 const nails: Gallery = {

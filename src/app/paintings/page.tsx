@@ -1,7 +1,9 @@
-import { Flex } from "@/once-ui/components";
-import Images from "@/app/components/Images";
+import { Flex, Grid } from "@/once-ui/components";
+import { Painting } from "@/app/components";
 import { baseURL, paintings } from "@/app/resources";
 import { Metadata } from "next";
+
+import styles from "./styles.module.scss";
 
 const { title, description, label } = paintings;
 const ogImage = `https://${baseURL}/og?title=${encodeURIComponent(title)}`;
@@ -44,7 +46,11 @@ export default function Paintings() {
           }),
         }}
       />
-      <Images images={paintings.images} />
+      <Grid className={styles.gallery}>
+        {paintings.images.map((image, index) => (
+          <Painting image={image} key={image.id} isPriority={index < 4} />
+        ))}
+      </Grid>
     </Flex>
   );
 }
