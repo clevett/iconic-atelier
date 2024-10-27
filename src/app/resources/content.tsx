@@ -116,7 +116,7 @@ const tattoos: Gallery = {
   label: "Tattoos",
   title: `Tattoos by Iconic Atelier`,
   description: `A tattoos collection by ${loki.name}`,
-  images: getImages("tattoos", 139),
+  images: getImages("tattoos", 99),
 };
 
 const contact = {

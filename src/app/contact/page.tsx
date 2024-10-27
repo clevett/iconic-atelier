@@ -70,6 +70,13 @@ export default function Home() {
         </Flex>
         <RevealFx translateY="12" delay={0.35}>
           <Flex gap="16">
+            <Text
+              wrap="balance"
+              onBackground="neutral-weak"
+              variant="body-default-l"
+            >
+              Message us on social media!
+            </Text>
             {social.map(
               (item) =>
                 item.link && (

@@ -102,12 +102,12 @@ export const Header = () => {
               href: "/nails",
               label: nails.label,
             })}
-          {/* {routes["/contact"] &&
+          {routes["/contact"] &&
             getButton({
               icon: "email",
               href: "/contact",
               label: contact.label,
-            })} */}
+            })}
         </Flex>
       </Flex>
       <Flex
