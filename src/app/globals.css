@@ -23,6 +23,9 @@
   --background-color: #191a1a;
   --font-primary: Eina, Helvetica, sans-serif;
   --font-secondary: Eina, Helvetica, sans-serif;
+  --xs: max-width: 390px
+  --s: max-width: 768px
+  --m: max-width: 1024px
 }
 
 body {

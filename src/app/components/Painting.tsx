@@ -23,31 +23,31 @@ export const Painting = ({
   };
 
   return (
-    <RevealFx translateY="4" style={{ width: "100%" }}>
-      <Grid className={styles.panel}>
-        <div className={styles.image}>
-          <SmartImage
-            alt={image.alt}
-            enlarge={false}
-            priority={isPriority}
-            radius="m"
-            src={image.src}
-          />
-        </div>
+    // <RevealFx translateY="4" style={{ width: "100%" }}>
+    <Grid className={styles.panel}>
+      <div className={styles.image}>
+        <SmartImage
+          alt={image.alt}
+          enlarge={false}
+          priority={isPriority}
+          radius="m"
+          src={image.src}
+        />
+      </div>
 
-        <Grid className={styles.description}>
-          <Heading wrap="balance" variant="display-strong-l">
-            {title}
-          </Heading>
-          <Text
-            onBackground="neutral-weak"
-            variant="body-default-l"
-            wrap="balance"
-          >
-            {description}
-          </Text>
-        </Grid>
+      <Grid className={styles.description}>
+        <Heading wrap="balance" variant="display-strong-l">
+          {title}
+        </Heading>
+        <Text
+          onBackground="neutral-weak"
+          variant="body-default-l"
+          wrap="balance"
+        >
+          {description}
+        </Text>
       </Grid>
-    </RevealFx>
+    </Grid>
+    // </RevealFx>
   );
 };
