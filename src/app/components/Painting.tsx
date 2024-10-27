@@ -1,5 +1,11 @@
 import { Image } from "@/app/resources";
-import { Grid, Heading, SmartImage, Text } from "@/once-ui/components";
+import {
+  Grid,
+  Heading,
+  RevealFx,
+  SmartImage,
+  Text,
+} from "@/once-ui/components";
 
 import styles from "./Painting.module.scss";
 
@@ -17,29 +23,31 @@ export const Painting = ({
   };
 
   return (
-    <Grid className={styles.panel}>
-      <div className={styles.image}>
-        <SmartImage
-          alt={image.alt}
-          enlarge={false}
-          priority={isPriority}
-          radius="m"
-          src={image.src}
-        />
-      </div>
+    <RevealFx translateY="4" style={{ width: "100%" }}>
+      <Grid className={styles.panel}>
+        <div className={styles.image}>
+          <SmartImage
+            alt={image.alt}
+            enlarge={false}
+            priority={isPriority}
+            radius="m"
+            src={image.src}
+          />
+        </div>
 
-      <Grid className={styles.description}>
-        <Heading wrap="balance" variant="display-strong-l">
-          {title}
-        </Heading>
-        <Text
-          onBackground="neutral-weak"
-          variant="body-default-l"
-          wrap="balance"
-        >
-          {description}
-        </Text>
+        <Grid className={styles.description}>
+          <Heading wrap="balance" variant="display-strong-l">
+            {title}
+          </Heading>
+          <Text
+            onBackground="neutral-weak"
+            variant="body-default-l"
+            wrap="balance"
+          >
+            {description}
+          </Text>
+        </Grid>
       </Grid>
-    </Grid>
+    </RevealFx>
   );
 };

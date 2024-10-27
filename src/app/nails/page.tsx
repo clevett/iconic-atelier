@@ -1,4 +1,4 @@
-import { Flex } from "@/once-ui/components";
+import { Flex, RevealFx } from "@/once-ui/components";
 import Images from "@/app/components/Images";
 import { baseURL, nails } from "@/app/resources";
 
@@ -31,26 +31,10 @@ export const metadata: Metadata = {
 };
 export default function Nails() {
   return (
-    <Flex fillWidth>
-      <script
-        type="application/ld+json"
-        suppressHydrationWarning
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "ImageGallery",
-            name: nails.title,
-            description: nails.description,
-            url: `https://${baseURL}/nails`,
-            image: nails.images.map((image) => ({
-              "@type": "ImageObject",
-              url: `${baseURL}${image.src}`,
-              description: image.alt,
-            })),
-          }),
-        }}
-      />
-      <Images images={nails.images} />
-    </Flex>
+    <RevealFx translateY="4" style={{ width: "100%" }}>
+      <Flex fillWidth direction="column">
+        <Images images={nails.images} />
+      </Flex>
+    </RevealFx>
   );
 }

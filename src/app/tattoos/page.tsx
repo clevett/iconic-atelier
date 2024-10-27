@@ -1,4 +1,4 @@
-import { Flex } from "@/once-ui/components";
+import { Flex, RevealFx } from "@/once-ui/components";
 import Images from "@/app/components/Images";
 import { baseURL, tattoos, home } from "@/app/resources";
 
@@ -32,34 +32,10 @@ export const metadata: Metadata = {
 
 export default function Tattoos() {
   return (
-    <Flex fillWidth>
-      <script
-        type="application/ld+json"
-        suppressHydrationWarning
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "ImageGallery",
-            name: tattoos.title,
-            description: tattoos.description,
-            url: `https://${baseURL}/tattoos`,
-            image: tattoos.images.map((image) => ({
-              "@type": "ImageObject",
-              url: `${baseURL}${image.src}`,
-              description: image.alt,
-            })),
-            author: {
-              "@type": "Person",
-              name: home.title,
-              image: {
-                "@type": "ImageObject",
-                url: `${baseURL}/icon.ico`,
-              },
-            },
-          }),
-        }}
-      />
-      <Images images={tattoos.images} />
-    </Flex>
+    <RevealFx translateY="4" style={{ width: "100%" }}>
+      <Flex fillWidth direction="column">
+        <Images images={tattoos.images} />
+      </Flex>
+    </RevealFx>
   );
 }

@@ -49,7 +49,7 @@ export default function Home() {
               {contact.headline}
             </Heading>
           </RevealFx>
-          <RevealFx translateY="8" delay={0.2}>
+          <RevealFx translateY="8">
             <Text
               wrap="balance"
               onBackground="neutral-weak"
@@ -58,7 +58,7 @@ export default function Home() {
               {contact.subline}
             </Text>
           </RevealFx>
-          <RevealFx translateY="12" delay={0.3}>
+          <RevealFx translateY="12">
             <Text
               wrap="balance"
               onBackground="neutral-weak"
@@ -68,7 +68,7 @@ export default function Home() {
             </Text>
           </RevealFx>
         </Flex>
-        <RevealFx translateY="12" delay={0.35}>
+        <RevealFx translateY="12">
           <Flex gap="16">
             <Text
               wrap="balance"

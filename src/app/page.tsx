@@ -90,7 +90,7 @@ export default function Home() {
               </Heading>
             </span>
           </RevealFx>
-          <RevealFx translateY="8" delay={0.15}>
+          <RevealFx translateY="8">
             <Text
               onBackground="neutral-weak"
               variant="body-default-l"
@@ -101,13 +101,13 @@ export default function Home() {
           </RevealFx>
         </Flex>
 
-        <RevealFx translateY="12" delay={0.2}>
+        <RevealFx translateY="12">
           <Flex show="s">
             <Socials />
           </Flex>
         </RevealFx>
 
-        <RevealFx translateY="16" delay={0.2}>
+        <RevealFx translateY="16">
           <SmartImage
             alt="Iconic Atelier is modern and stylish art / tattoo studio"
             aspectRatio="16 / 9"
