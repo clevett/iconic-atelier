@@ -2,7 +2,7 @@ import "@/once-ui/styles/index.scss";
 import "@/once-ui/tokens/index.scss";
 
 import { Flex, Background } from "@/once-ui/components";
-import { Footer, Header, RouteGuard } from "@/app/components";
+import { Footer, Header } from "@/app/components";
 import { baseURL, effects, home, style } from "@/app/resources";
 
 import { Metadata } from "next";
@@ -82,7 +82,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
           flex={1}
         >
           <Flex justifyContent="center" fillWidth minHeight="0">
-            <RouteGuard>{children}</RouteGuard>
+            <>{children}</>
           </Flex>
         </Flex>
         <Footer />
