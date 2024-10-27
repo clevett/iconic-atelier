@@ -59,6 +59,16 @@ export const Contact = () => {
 
   return (
     <Flex fillWidth direction="column" gap="m">
+      {sendInProgress && (
+        <Heading wrap="balance" variant="body-strong-l">
+          Sending...
+        </Heading>
+      )}
+      {messageSent && (
+        <Heading wrap="balance" variant="body-strong-l" color={hsla}>
+          {messageCallout}
+        </Heading>
+      )}
       <Heading wrap="balance" variant="body-strong-l">
         Contact
       </Heading>

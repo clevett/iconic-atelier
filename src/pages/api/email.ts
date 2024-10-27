@@ -44,7 +44,7 @@ export default async function handler(
     const mailOptions = {
       from: `${name} <${email}>`,
       to: process.env.EMAIL_USERNAME,
-      subject: "Contact Form Submission",
+      subject: "Contact Email from Iconic Atelier.com",
       html: `<p><b>Name:</b> ${name}</p>
            <p><b>Email:</b> ${email}</p>
            <p><b>Message:</b> ${message}</p>`,
