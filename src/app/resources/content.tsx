@@ -102,7 +102,7 @@ const paintings: Gallery = {
   label: "Paintings",
   title: `Paintings by Iconic Atelier`,
   description: `A paintings collection by ${loki.name}`,
-  images: getImages("paintings", 5, "horizontal"),
+  images: getImages("paintings", 23, "horizontal"),
 };
 
 const nails: Gallery = {

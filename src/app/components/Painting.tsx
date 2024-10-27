@@ -13,7 +13,7 @@ export const Painting = ({
   const { description, title } = {
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.",
-    title: "Woman on Fire",
+    title: "Lorem Ipsum",
   };
 
   return (
@@ -24,7 +24,6 @@ export const Painting = ({
           enlarge={false}
           priority={isPriority}
           radius="m"
-          // sizes="(max-width: 500px) 100vw, (max-width: 700px) 50vw, 33vw"
           src={image.src}
         />
       </div>
