@@ -1,6 +1,5 @@
 //Font - Eina 01
 //https://github.com/ionic-team/ionic-legacy-docs/tree/master/content/docs/v3/fonts/eina
-//Iconic with red dot
 
 const location = {
   rvk: "Iceland/Reykjavik",
