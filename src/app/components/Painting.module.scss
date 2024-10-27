@@ -1,4 +1,5 @@
 .panel {
+  background-color: transparent;
   border-radius: 5px;
   padding: 10px;
   margin: 10px;
@@ -37,16 +38,18 @@
 }
 
 .description {
-  background-color: #f4f4f4;
-  box-shadow: 0 0.9px 4px rgb(0 0 0 / 28%), 0 2.6px 8px rgb(0 0 0 / 21%),
-    0 5.7px 12px rgb(0 0 0 / 18%), 0 15px 15px rgb(0 0 0 / 14%);
-
+  background-color: #191a1a;
+  // box-shadow: 0 0.9px 4px rgb(0 0 0 / 28%), 0 2.6px 8px rgb(0 0 0 / 21%),
+  //   0 5.7px 12px rgb(0 0 0 / 18%), 0 15px 15px rgb(0 0 0 / 14%);
+  box-shadow: 0 0.9px 4px rgba(0, 0, 0, 0.28), 0 2.6px 8px rgb(255 255 255),
+    0 5.7px 12px rgb(255 255 255 / 93%), 0 15px 15px rgba(0, 0, 0, 0.14);
   align-self: center;
   border-radius: 8px;
   gap: 1rem;
   grid-auto-rows: max-content;
   grid-column: 2;
   height: 250px;
+  justify-content: center;
   left: -100px;
   max-height: 250px;
   max-width: 500px;
@@ -54,10 +57,4 @@
   position: absolute;
   width: 500px;
   z-index: 5;
-  justify-content: center;
-
-  h1,
-  span {
-    color: black;
-  }
 }

@@ -20,6 +20,7 @@
 }
 
 :root {
+  --background-color: #191a1a;
   --font-primary: Eina, Helvetica, sans-serif;
   --font-secondary: Eina, Helvetica, sans-serif;
 }
