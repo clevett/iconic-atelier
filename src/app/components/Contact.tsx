@@ -15,13 +15,6 @@ export const Contact = () => {
 
   const onSubmit = (e: { preventDefault: () => void }) => {
     e.preventDefault();
-
-    console.log({
-      name,
-      email,
-      message,
-    });
-
     setSendInProgress(true);
     fetch("/api/email", {
       method: "POST",
