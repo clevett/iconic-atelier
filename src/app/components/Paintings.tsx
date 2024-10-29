@@ -1,5 +1,6 @@
 import { Image } from "@/app/resources";
 import {
+  Flex,
   Grid,
   Heading,
   RevealFx,
@@ -7,7 +8,7 @@ import {
   Text,
 } from "@/once-ui/components";
 
-import styles from "./Painting.module.scss";
+import styles from "./Paintings.module.scss";
 
 export const Painting = ({
   image,
@@ -23,7 +24,6 @@ export const Painting = ({
   };
 
   return (
-    // <RevealFx translateY="4" style={{ width: "100%" }}>
     <Grid className={styles.panel}>
       <div className={styles.image}>
         <SmartImage
@@ -48,6 +48,15 @@ export const Painting = ({
         </Text>
       </Grid>
     </Grid>
-    // </RevealFx>
+  );
+};
+
+export const Paintings = ({ images }: { images: Image[] }) => {
+  return (
+    <Flex className={styles.images}>
+      {images.map((image, index) => (
+        <Painting image={image} key={image.id} isPriority={index < 4} />
+      ))}
+    </Flex>
   );
 };
