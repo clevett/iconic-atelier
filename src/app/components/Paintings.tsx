@@ -36,9 +36,7 @@ export const Painting = ({
       </div>
 
       <Grid className={styles.description}>
-        <Heading wrap="balance" variant="display-strong-l">
-          {title}
-        </Heading>
+        <Heading wrap="balance">{title}</Heading>
         <Text
           onBackground="neutral-weak"
           variant="body-default-l"
