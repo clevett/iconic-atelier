@@ -38,27 +38,26 @@ const social = [
   {
     name: "Facebook",
     icon: "facebook",
-    link: "https://www.facebook.com/iconicatelierr",
-    dm: "https://m.me/iconicatelierr",
+    link: "https://www.facebook.com/ICONICatelierr",
+    dm: "https://m.me/ICONICatelierr",
   },
   {
     name: "Instagram",
     icon: "instagram",
-    link: "https://www.instagram.com/iconicatelier_",
-    dm: "https://instagram.com/m/iconicatelier_",
+    link: "https://www.instagram.com/ICONICatelier_",
+    dm: "https://instagram.com/m/ICONICatelier_",
   },
 ];
 
 const home = {
   label: "About",
-  title: `Iconic Atelier`,
+  title: `ICONIC Atelier`,
   description: `An art studio located in Reykjavik, Iceland.`,
   address: "Skyggnisbraut 13, Reykjavik 113",
   headline: (
     <span>
-      Iconic
+      ICONIC <span style={{ color: "#d20306" }}>.</span>
       <br /> Atelier
-      <span style={{ color: "#d20306" }}>.</span>
     </span>
   ),
   subline: (
@@ -102,29 +101,29 @@ const getImages = (
 
 const paintings: Gallery = {
   label: "Paintings",
-  title: `Paintings by Iconic Atelier`,
+  title: `Paintings by ICONIC Atelier`,
   description: `A paintings collection by ${loki.name}`,
   images: getImages("paintings", 23, "horizontal"),
 };
 
 const nails: Gallery = {
   label: "Nails",
-  title: "Nails by Iconic Atelier",
+  title: "Nails by ICONIC Atelier",
   description: `A nail collection by ${gabby.name}`,
   images: getImages("nails", 25),
 };
 
 const tattoos: Gallery = {
   label: "Tattoos",
-  title: `Tattoos by Iconic Atelier`,
+  title: `Tattoos by ICONIC Atelier`,
   description: `A tattoos collection by ${loki.name}`,
   images: getImages("tattoos", 99),
 };
 
 const contact = {
   label: "Contact",
-  title: "Contact Iconic Atelier",
-  description: `Get in touch with Iconic Atelier`,
+  title: "Contact ICONIC Atelier",
+  description: `Get in touch with ICONIC Atelier`,
   address: "Skyggnisbraut 13, Reykjavik 113",
   headline: "Contact Us",
   subline: (

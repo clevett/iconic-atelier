@@ -87,7 +87,9 @@ export default function Home() {
             <span className={` ${styles.textShadow}`}>
               <Heading wrap="balance" variant="display-strong-l">
                 <span>
-                  Iconic <br />
+                  ICONIC
+                  <span style={{ color: "#d20306" }}>.</span>
+                  <br />
                   <span
                     style={{
                       fontSize:
@@ -95,7 +97,6 @@ export default function Home() {
                     }}
                   >
                     Atelier
-                    <span style={{ color: "#d20306" }}>.</span>
                   </span>
                 </span>
               </Heading>
