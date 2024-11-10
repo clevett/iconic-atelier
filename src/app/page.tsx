@@ -95,8 +95,8 @@ export default function Home() {
                     }}
                   >
                     Atelier
+                    <span style={{ color: "#d20306" }}>.</span>
                   </span>
-                  <span style={{ color: "#d20306" }}>.</span>
                 </span>
               </Heading>
             </span>
