@@ -37,8 +37,6 @@ interface RootLayoutProps {
 }
 
 export default function RootLayout({ children }: RootLayoutProps) {
-  // console.log(myFont.className);
-
   return (
     <Flex
       as="html"

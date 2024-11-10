@@ -86,7 +86,18 @@ export default function Home() {
           <RevealFx translateY="4">
             <span className={` ${styles.textShadow}`}>
               <Heading wrap="balance" variant="display-strong-l">
-                {home.headline}
+                <span>
+                  Iconic <br />
+                  <span
+                    style={{
+                      fontSize:
+                        "calc(var(--font-size-display-ml) * var(--font-size-heading-multiplier))",
+                    }}
+                  >
+                    Atelier
+                  </span>
+                  <span style={{ color: "#d20306" }}>.</span>
+                </span>
               </Heading>
             </span>
           </RevealFx>

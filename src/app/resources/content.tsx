@@ -51,12 +51,14 @@ const social = [
 
 const home = {
   label: "About",
-  title: `ICONIC Atelier`,
+  title: `Iconic Atelier`,
   description: `An art studio located in Reykjavik, Iceland.`,
   address: "Skyggnisbraut 13, Reykjavik 113",
   headline: (
     <span>
-      ICONIC<span style={{ color: "#d20306" }}>.</span> Atelier
+      Iconic
+      <br /> Atelier
+      <span style={{ color: "#d20306" }}>.</span>
     </span>
   ),
   subline: (
