@@ -1,6 +1,7 @@
 import "@/once-ui/styles/index.scss";
 import "@/once-ui/tokens/index.scss";
 
+import { Analytics } from "@vercel/analytics/react";
 import { Flex, Background } from "@/once-ui/components";
 import { Footer, Header } from "@/app/components";
 import { baseURL, effects, home, style } from "@/app/resources";
@@ -52,6 +53,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
       data-surface={style.surface}
       data-transition={style.transition}
     >
+      <Analytics />
       <Flex
         style={{ minHeight: "100vh" }}
         as="body"
