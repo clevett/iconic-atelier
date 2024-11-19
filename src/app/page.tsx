@@ -86,19 +86,23 @@ export default function Home() {
           <RevealFx translateY="4">
             <span className={` ${styles.textShadow}`}>
               <Heading wrap="balance" variant="display-strong-l">
-                <span>
-                  ICONIC
-                  <span style={{ color: "#d20306" }}>.</span>
-                  <br />
-                  <span
-                    style={{
-                      fontSize:
-                        "calc(var(--font-size-display-ml) * var(--font-size-heading-multiplier))",
-                    }}
-                  >
-                    Atelier
-                  </span>
-                </span>
+                <div className="grid gap-2">
+                  <div className="font-primary">
+                    ICONIC
+                    <span style={{ color: "#d20306" }}>.</span>
+                  </div>
+
+                  <div style={{ marginLeft: "2rem" }}>
+                    <span
+                      style={{
+                        fontSize:
+                          "calc(var(--font-size-display-m) * var(--font-size-heading-multiplier))",
+                      }}
+                    >
+                      Atelier
+                    </span>
+                  </div>
+                </div>
               </Heading>
             </span>
           </RevealFx>
